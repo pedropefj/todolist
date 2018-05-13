@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Usuários</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let u of usuarios"(click)="selecionaUsuario(u.codigo)">
+      {{u.nome}}
+    </button>
+  </ion-list>
+  <div id="mais">
+        <button ion-button round color="primary" (click)="novoUsuario()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+  </div>
+</ion-content>
